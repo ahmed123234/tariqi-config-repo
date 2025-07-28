@@ -1,0 +1,13 @@
+# This file will be fetched by the authentication-service from the Config Server
+jwt:
+  secret: YourSuperStrongAndComplexSecretKeyForJWTsInProduction!
+  expiration: 7200000 # 2 hours
+
+spring:
+  datasource:
+    url: jdbc:postgresql://your-db-host:5432/auth_db
+    username: auth_user
+    password: auth_password
+  jpa:
+    hibernate:
+      ddl-auto: update
